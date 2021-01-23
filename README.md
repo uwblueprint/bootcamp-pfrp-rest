@@ -24,7 +24,7 @@ $ docker-compose --version
 2. Clone this repo and go into the project directory
 ```
 $ git clone https://github.com/uwblueprint/bootcamp-pfrp-rest.git
-$ cd bootcamp-prfp-rest
+$ cd bootcamp-pfrp-rest
 ```
 
 3. Fill in backend environment variables in `/backend/.env.sample`, then rename the file to `.env`. Tip: use `mv <old-filename> <new-filename>`
@@ -119,7 +119,7 @@ A `RestaurantGroup` model should have these fields: `id`, `name`, `description`,
     b. To support _retrieving_ a group, make an endpoint called `/groups/<int:id>` which handles a `GET` request. It will accept an `id` as the request parameter and return the Restaurant Group data corresponding to that `id`
     
     **Sample Response Body** for `/groups/1`
-    ```json
+    ```js
         {
             "id": 1,
             "name": "example_name",
