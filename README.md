@@ -32,7 +32,7 @@ $ cd bootcamp-pfrp-rest
 POSTGRES_DB=bootcamp
 POSTGRES_USER=<insert-username-of-your-choice>
 POSTGRES_PASSWORD=<insert-password-of-your-choice>
-DB_HOST=bootcamp-pfrp-rest_db_1
+DB_HOST=bootcamp-pfrp-rest-db-1
 FLASK_CONFIG=development
 ```
 
