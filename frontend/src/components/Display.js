@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import BasicTable from './BasicTable';
+import RevisedTable from './RevisedTable';
 
 import './Display.scss';
 
@@ -64,6 +65,8 @@ const Display = ({loadData, storeData}) => {
       <BasicTable data={data} />
       <h2>Global Data Handling</h2>
       <BasicTable  data={storeData} />
+      <h2>RevisedTable</h2>
+      <RevisedTable />
     </div>
   );
 }

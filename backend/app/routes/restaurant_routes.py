@@ -21,7 +21,7 @@ def get_restaurants():
 
 # defines GET endpoint for retrieving a single restaurant based on a provided id
 @blueprint.route('/<int:id>', methods=['GET'], strict_slashes=False)
-def get_restaurant(id):
+def get_restaurant(id): #each endpoint is its own function
     result = restaurant_service.get_restaurant(id)
     if result is None:
         error = {'error': 'restaurant not found'}

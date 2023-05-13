@@ -10,7 +10,7 @@ db = SQLAlchemy()
 #
 # typically we would use migrations to modify the DB schema, especially for production apps
 # migrations are safer and offer more fine-grained controls. However, for simplicity, we won't use migrations for bootcamp
-erase_db_and_sync = False
+erase_db_and_sync = True
 
 def init_app(app):
     # look at restaurant.py for the model (and table) definition
