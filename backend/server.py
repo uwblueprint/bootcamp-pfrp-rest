@@ -16,5 +16,5 @@ if __name__ == '__main__':
     # go to app/__init__.py to see the create_app definition
     app = create_app(config_name)
 
-    # run the app, it listens on port 5000
-    app.run(host='0.0.0.0', port=5000)
+    # run the app, it listens on port 8080
+    app.run(host='0.0.0.0', port=8080)

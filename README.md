@@ -75,11 +75,11 @@ If we look at `backend/app/routes/restaurant_routes.py`, we can see each endpoin
 
 Reading the comments, if we want to create a restaurant, we will need to trigger the code in `create_restaurant()` by making a `POST` request to the *path* `/`. Note the path is relative to the root URL that we configured for this router, which is `/restaurants`, so the full path is actually `/restaurants/`. We can usually omit trailing "/"s in URLs.
 
-If you look in the file `server.py`, you see that `app.run(..., port=5000)`, which tells us the server is listening for requests on *port* `5000`.
+If you look in the file `server.py`, you see that `app.run(..., port=8080)`, which tells us the server is listening for requests on *port* `8080`.
 
-Since we are running this *locally*, we can put all these pieces of information together into one url: `http://localhost:5000/restaurants`.
+Since we are running this *locally*, we can put all these pieces of information together into one url: `http://localhost:8080/restaurants`.
 
-Try downloading [Postman](https://www.postman.com/), and make a `POST` request to `http://localhost:5000/restaurants`. You can read the *Tip* section below or the documentation to learn more about Postman.
+Try downloading [Postman](https://www.postman.com/), and make a `POST` request to `http://localhost:8080/restaurants`. You can read the *Tip* section below or the documentation to learn more about Postman.
 
 **Hint**: At this point, you may be wondering how will you specify the fields necessary to create a Restaurant. When we look at the code in `restaurant_routes.py`, we see a `RestaurantResource` being created to handle the HTTP request body (`request.json`). Try reading that & the comments associated.
 
