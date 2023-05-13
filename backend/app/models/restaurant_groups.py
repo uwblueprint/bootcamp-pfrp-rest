@@ -4,8 +4,6 @@ from sqlalchemy.orm.properties import ColumnProperty
 from . import db
 from .budget_enum import budget_enum
 
-from .restaurant_groups import RestaurantGroup
-
 # common columns and methods across multiple data models can be added via a Mixin class:
 # https://docs.sqlalchemy.org/en/13/orm/extensions/declarative/mixins.html
 
@@ -13,19 +11,14 @@ from .restaurant_groups import RestaurantGroup
 # https://github.com/uwblueprint/dancefest-web/blob/master/db/models.py#L10-L70
 # https://github.com/uwblueprint/plasta/blob/master/backend/app/models/mixins.py#L10-L95
 
-class Restaurant(db.Model):
-    # define the restaurants table
+class RestaurantGroup(db.Model):
+    # define the restaurants groups table
 
-    __tablename__ = 'restaurants'
+    __tablename__ = 'restaurants-groups'
 
     id = db.Column(db.Integer, primary_key=True, nullable=False)
     name = db.Column(db.String(50), nullable=False)
-    address = db.Column(db.String(250))
-    type = db.Column(db.String(50))
-    budget = db.Column(budget_enum)
     description = db.Column(db.String(250))
-    rating = db.Column(db.Integer)
-    group = db.Column(db.Integer, db.ForeignKey("restaurants-groups.id"))
 
     # must define how to convert to a dict so that Restaurant can eventually be serialized into JSON
     # this would be a good method to include in a base Mixin
