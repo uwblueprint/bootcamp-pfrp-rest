@@ -28,5 +28,5 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "proxy": "http://bootcamp-pfrp-rest_backend_1:5000"
+  "proxy": "http://bootcamp-pfrp-rest-backend-1:5000"
 }
