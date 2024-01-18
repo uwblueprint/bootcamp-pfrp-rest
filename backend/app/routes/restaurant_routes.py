@@ -32,6 +32,9 @@ def get_restaurant(id):
     return jsonify(result), 200
 
 
+#define POST endpoint for creating a reviewr user
+
+
 # define POST endpoint for creating a restaurant
 @blueprint.route('/', methods=['POST'], strict_slashes=False)
 def create_restaurant():
